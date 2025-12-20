@@ -8,16 +8,23 @@
 
     </style>
   </head>
-  <nav>
-    <div class="menuItem" id="menuSpacerLeft" style="width: 25%;"></div>
-    <input class="menuItem" style="max-width: fit-content;" type="image" src="assets/C_Logo.png" onclick="location.href='index.html'"></input>
-    <button class="menuItem menuInteractive", onclick="location.href='index.html'">Cody Wiebe-Kehler</button>
-    <button class="menuItem menuInteractive", onclick="location.href='about.html'">About</button>
-    <div class = "menuItem", id="menuSpacerRight" style="width: 25%;"></div>
-  </nav>
 
   <body>
-    
+    <verticalNav>
+      <div class="menuItem menuItemVert menuSpacer" id="menuSpacerLeft"></div>
+      <!--input class="menuItem" style="max-width: fit-content;" type="image" src="assets/C_Logo.png" onclick="location.href='index.html'">
+      old horizontal Nav logo code
+      </input-->
+      <input class="menuItem menuItemVert" onclick="location.href='index.html'" style="height: 0;">
+        <image style="height:30%; max-width: 30%;" type="image" src="assets/C_Logo.png"></image>
+      </input>
+      <button class="menuItem menuItemVert menuInteractive", onclick="location.href='index.html'">Home</button>
+      <button class="menuItem menuItemVert menuInteractive", onclick="location.href='about.html'">About</button>
+      <div class = "menuItem menuItemVert menu menuSpacer", id="menuSpacerRight"></div>
+    </verticalNav>
+
+
+    <div style="background-color: aqua; width: 100%;">Cody</div>
 
 
   </body>
