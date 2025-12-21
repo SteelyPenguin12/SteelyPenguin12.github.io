@@ -1,6 +1,6 @@
 /*default css style code for all pages of the website*/
 :root{/*variables*/
-    --nav-max-height: 100px;
+    --nav-max-width: 100px;
     --primary-color: rgb(56, 56, 56);
     --secondary-color: darkgrey;
     --accent-color: rgb(255, 145, 0);
@@ -21,6 +21,7 @@ verticalnav{
     padding: 0px;
     height: 100%;
     width: 20%;
+    max-width: var(--nav-max-width);
     background-color: var(--accent-color);
     display: flex;
     flex-direction: column;
@@ -43,14 +44,12 @@ body{
     padding: 0px;
     flex-grow: 1;  
     text-align: center;
-    width: 100%;
 }
 .menuItemVert{
     height: inherit;
 }
 .menuSpacer{
-    width: 100%;
-    background-color: transparent;
+    height: 100%;
 }
 
 .menuInteractive:hover{
