@@ -37,23 +37,26 @@ body{
 }
 
 /*lower items ovverride*/
-.menuItem{
+.navItem{
     background-color: transparent;
     margin: 0px;
     border: 0px;
     padding: 0px;
     flex-grow: 1;  
     text-align: center;
-}
-.menuItemVert{
     height: inherit;
+    width: 100%;
 }
 .menuSpacer{
     height: 100%;
 }
 
 .menuInteractive:hover{
-    background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);
+    /*background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);*/
+
+    /*rounded square hover effect*/
+    border-radius: 10%;
+    background-color: var(--accent-color-2);
 }
 .slide{
     width: 100%;
