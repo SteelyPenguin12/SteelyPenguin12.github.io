@@ -14,13 +14,24 @@
 
   <body>
     <nav>
-      <div class="navItem menuSpacer" id="menuSpacerLeft"></div>
-      <input class="navItem menuInteractive" onclick="location.href='/index.html'" style="anchor-name: --parent;">
-        <image onclick="location.href='index.html'" style="max-width: 50%; max-height: 100%; position: absolute;position-anchor: --parent; position-area: center center;" type="image" src="assets/C_Logo.png"></image>
-      </input>
-      <button class="navItem menuInteractive", onclick="location.href='/index.html'">Home</button>
-      <button class="navItem menuInteractive", onclick="location.href='pages/about.html'">About</button>
-      <div class = "navItem menuSpacer", id="menuSpacerRight"></div>
+      <div class="nav-top">
+        <input class="navItem" onclick="location.href='/index.html'" style="anchor-name: --parent;">
+          <image onclick="location.href='/index.html'" style="height: 100%; position: absolute;position-anchor: --parent; position-area: center center;" type="image" src="assets/C_Logo.png"></image>
+        </input>
+      </div>
+
+      <div class="nav-mid">
+        <button class="navItem nav-interactive", onclick="location.href='/index.html'">Home</button>
+        <button class="navItem nav-interactive", onclick="location.href='pages/about.html'">About</button>
+        <button class="navItem nav-nteractive", onclick="location.href='pages/projects.html'">Projects</button>
+      </div>
+
+      <div class="nav-bottom">
+        <div class="navItem" style="background-color: blue;">1</div>
+        <div class="navItem" style="background-color: red;">2</div>
+        <div class="navItem" style="background-color: blue;">3</div>
+        <div class="navItem" style="background-color: red;">4</div>
+      </div>
     </nav>
 
 

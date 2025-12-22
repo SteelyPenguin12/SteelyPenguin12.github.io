@@ -16,7 +16,7 @@ nav{
     background-color: var(--accent-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
 }
@@ -34,20 +34,29 @@ body{
     margin: 0px;
     border: 0px;
     padding: 0px;
-    flex-grow: 1;  
+    height: 3rem;
     text-align: center;
-    height: inherit;
     width: 100%;
 }
-.menuSpacer{
-    height: 100%;
+.nav-mid,.nav-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+.nav-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.menuInteractive:hover{
+.nav-interactive:hover{
     /*background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);*/
 
     /*rounded square hover effect*/
-    width: 95%;
     border-radius: 10%;
     background-color: var(--accent-color-2);
 }
