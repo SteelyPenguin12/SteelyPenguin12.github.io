@@ -29,15 +29,6 @@ body{
 }
 
 /*lower items ovverride*/
-.navItem{
-    background-color: transparent;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    height: 3rem;
-    text-align: center;
-    width: 100%;
-}
 .nav-mid,.nav-top{
     width: 100%;
     display: flex;
@@ -52,7 +43,15 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
 }
-
+.navItem{
+    background-color: transparent;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 3rem;
+    text-align: center;
+    width: 100%;
+}
 .nav-interactive:hover{
     /*background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);*/
 
