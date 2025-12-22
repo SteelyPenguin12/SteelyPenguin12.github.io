@@ -1,6 +1,6 @@
 /*default css style code for all pages of the website*/
 :root{/*variables*/
-    --nav-max-width: 100px;
+    --nav-max-width: 7rem;
     --primary-color: rgb(56, 56, 56);
     --secondary-color: darkgrey;
     --accent-color: rgb(255, 145, 0);
@@ -44,13 +44,20 @@ body{
     justify-content: space-evenly;
 }
 .navItem{
+    width: 100%;
     background-color: transparent;
     margin: 0px;
     border: 0px;
     padding: 0px;
     height: 3rem;
     text-align: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.navItem{
+    text-decoration: none;
+    cursor: pointer;
 }
 .nav-interactive:hover{
     /*background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);*/
