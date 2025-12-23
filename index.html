@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline'"-->
     <link rel="stylesheet" href="/style.css">
     
     <title>Cody Wiebe-Kehler</title>
@@ -40,10 +41,10 @@
 
     <!--light/dark mode switch-->
     <div class="theme-toggle">
-      <button class="theme-button sun">
+      <button class="theme-button sun" id="theme-button-sun">
         <image type="image" src="/assets/media-icons/sun-hollow.png" alt="switch to light mode" style="width: 2.5em;"></image>
       </button>
-      <button class="theme-button moon">
+      <button class="theme-button moon" id="theme-button-moon">
         <image type="image" src="/assets/media-icons/moon.png" alt="switch to dark mode" style="width: 2.5em;"></image>
       </button>
     </div>
@@ -52,6 +53,7 @@
     <div style="background-color: var(--secondary-color); width: 100%; padding-left: var(--nav-max-width);">Cody</div>
 
 
+    <script src="/index.js" ></script>
   </body>
 
 
