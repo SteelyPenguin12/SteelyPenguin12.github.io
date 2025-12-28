@@ -1,25 +1,28 @@
 /*default css style code for all pages of the website*/
 :root{/*variables*/
-    /*light and dark mode colours*/
+    /*All Used Colours*/
+    /*light mode*/
+    --primary-light:rgb(228, 228, 228);
+    --secondary-light:rgb(156, 156, 156);
+    /*dark mode*/
     --primary-dark: rgb(36, 36, 36);
     --secondary-dark:grey;
-    --primary-light:white;
-    --secondary-light:rgb(236, 236, 236);
+    /*universal colours*/
+    --accent-color: rgb(255, 145, 0);
+    --accent-color-2: rgb(255, 123, 0);
 
     /*selected theme colours*/
     --primary-color: var(--primary-light);
     --secondary-color: var(--secondary-light);
-    --accent-color: rgb(255, 145, 0);
-    --accent-color-2: rgb(255, 123, 0);
+    --theme-toggle-enabled-colour: grey;
+    --theme-toggle-disabled-colour: white;
 
 
 
     --nav-max-width: 7rem;
 
-    --theme-toggle-width:100px;
-    --theme-toggle-border-radius:5px;
-    --theme-toggle-enabled-colour: grey;
-    --theme-toggle-disabled-colour: white;
+    --theme-toggle-width: 7rem;
+    --theme-toggle-border-radius: 5px;
 }
 nav{
     margin: 0px;
@@ -86,25 +89,30 @@ a.navItem{
     width: var(--theme-toggle-width);
     height: var(--theme-toggle-width/2);
     background-color: transparent;
+    margin: 0px;
+    border: 1px solid black;
+    padding: 0px;
+    border-radius: var(--theme-toggle-border-radius);
+
     position: absolute;
     top: 10px;
     right: 10px;
 
     display: flex;
 }
-.theme-button{
+.theme-icon{
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.theme-button.sun{
+.theme-icon.sun{
     background-color: var(--theme-toggle-enabled-colour);
     border-top-left-radius: var(--theme-toggle-border-radius);
     border-bottom-left-radius: var(--theme-toggle-border-radius);
 }
-.theme-button.moon{
+.theme-icon.moon{
     background-color: var(--theme-toggle-disabled-colour);
     border-top-right-radius: var(--theme-toggle-border-radius);
     border-bottom-right-radius: var(--theme-toggle-border-radius);
