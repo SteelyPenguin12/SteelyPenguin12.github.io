@@ -23,11 +23,28 @@
 
     --theme-toggle-width: 7rem;
     --theme-toggle-border-radius: 5px;
+    
+}
+body{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+
+    background-color: blue;/*var(--primary-color);*/
+    display: flex;
+}
+main{
+    padding-left: var(--nav-max-width); /*aligns content to be beside navbar*/
+    padding-bottom: env(safe-area-inset-bottom); /*for mobile devices with notches*/
+    position: relative;
+    height: 100%;
+    width: 100%;
+
 }
 nav{
     margin: 0px;
     border: 0px;
-    padding: 0px;
+    padding-left: env(safe-area-inset-left); /*for mobile devices with notches*/
     height: 100%;
     width: 20%;
     max-width: var(--nav-max-width);
@@ -38,14 +55,6 @@ nav{
     align-items: center;
     position: fixed;
 }
-body{
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    background-color: var(--primary-color);
-    display: flex;
-}
-
 /*lower items ovverride*/
 .nav-mid,.nav-top{
     width: 100%;
@@ -94,7 +103,7 @@ a.navItem{
     padding: 0px;
     border-radius: var(--theme-toggle-border-radius);
 
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
 

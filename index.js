@@ -67,6 +67,7 @@ function getThemePreference() {//figures out what the current theme preference s
     }
 }
 function setThemePreference() { //stores current theme preference to local storage
+    console.log(`storing theme preference: ${theme.value}`);
     localStorage.setItem(storageKey, theme.value);
     reflectPreference();
 }
