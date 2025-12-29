@@ -18,6 +18,9 @@ const secondaryLight = computedStyles.getPropertyValue('--secondary-light');
 const secondaryDark = computedStyles.getPropertyValue('--secondary-dark');
 
 //stores refrences to html objects
+const navbar = document.getElementsByTagName("nav")[0];
+console.log(`navbar element: ${navbar}`);
+const mainContent = document.getElementsByTagName("main")[0];
 const sunIcon = document.getElementById("theme-icon-sun");
 const moonIcon = document.getElementById("theme-icon-moon");
 const themeButton = document.getElementById("theme-button");
@@ -37,6 +40,10 @@ themeButton.addEventListener("click",function(){
 });
 
 //functions
+function reziseMain(){ //adjusts main content padding to match navbar width
+    mainContent.style.setProperty("padding-left",`${navbar.offsetWidth}px`);
+    console.log(`resized main padding-left to fit navbar width: ${navbar.offsetWidth}px`);
+}
 function reflectPreference() { //updates css to reflect selected theme preference
     if (theme.value === 'dark'){
         //apply dark mode styles to style.css
@@ -71,16 +78,10 @@ function setThemePreference() { //stores current theme preference to local stora
     localStorage.setItem(storageKey, theme.value);
     reflectPreference();
 }
-
+//event listeners/onload
 //runs on load and sets initial theme
 window.onload = () => {
     reflectPreference()
-
-    //auto add onclick to correct buttons based on class
-    /* something like this maybe?
-    document
-    .querySelector('#theme-toggle')
-    .addEventListener('click', onClick)*/
 };
 
 //adds an event listener to detect system theme changes
@@ -98,5 +99,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (ev
     setThemePreference();
   }
   reflectPreference();
+});
+
+window.addEventListener("resize",function(){ //offset main content based on navbar width when window resized
+    reziseMain();
+});
+
+window.addEventListener("DOMContentLoaded", function() { //adjust main content padding on load AFTER main HTML is loaded (aka navbar is placed already and size is known)
+    reziseMain();
 });
 
