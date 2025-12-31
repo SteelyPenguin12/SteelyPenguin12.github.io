@@ -16,10 +16,11 @@ const primaryLight = computedStyles.getPropertyValue('--primary-light');
 const primaryDark = computedStyles.getPropertyValue('--primary-dark');
 const secondaryLight = computedStyles.getPropertyValue('--secondary-light');
 const secondaryDark = computedStyles.getPropertyValue('--secondary-dark');
+const textLight = computedStyles.getPropertyValue('--text-light');
+const textDark = computedStyles.getPropertyValue('--text-dark');
 
 //stores refrences to html objects
 const navbar = document.getElementsByTagName("nav")[0];
-console.log(`navbar element: ${navbar}`);
 const mainContent = document.getElementsByTagName("main")[0];
 const sunIcon = document.getElementById("theme-icon-sun");
 const moonIcon = document.getElementById("theme-icon-moon");
@@ -40,7 +41,7 @@ themeButton.addEventListener("click",function(){
 });
 
 //functions
-function reziseMain(){ //adjusts main content padding to match navbar width
+function reziseMain(){ //adjusts main content left spacing to match navbar width
     mainContent.style.setProperty("padding-left",`${navbar.offsetWidth}px`);
     console.log(`resized main padding-left to fit navbar width: ${navbar.offsetWidth}px`);
 }
@@ -49,11 +50,13 @@ function reflectPreference() { //updates css to reflect selected theme preferenc
         //apply dark mode styles to style.css
         rootElement.style.setProperty("--primary-color",`${primaryDark}`);
         rootElement.style.setProperty("--secondary-color",`${secondaryDark}`);
+        rootElement.style.setProperty("--text-color",`${textDark}`);
         console.log("dark mode settings applied");
     }else{
         //apply light mode styles to style.css
         rootElement.style.setProperty("--primary-color",`${primaryLight}`);
         rootElement.style.setProperty("--secondary-color",`${secondaryLight}`);
+        rootElement.style.setProperty("--text-color",`${textLight}`);
         console.log("light mode settings applied");
     }
 }
@@ -105,7 +108,7 @@ window.addEventListener("resize",function(){ //offset main content based on navb
     reziseMain();
 });
 
-window.addEventListener("DOMContentLoaded", function() { //adjust main content padding on load AFTER main HTML is loaded (aka navbar is placed already and size is known)
+window.addEventListener("DOMContentLoaded", function() { //adjust main content offset on load AFTER main HTML is loaded (aka navbar is placed already and size is known)
     reziseMain();
 });
 
