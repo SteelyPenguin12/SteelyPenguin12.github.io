@@ -20,8 +20,7 @@
     --theme-toggle-enabled-colour: grey;
     --theme-toggle-disabled-colour: white;
 
-
-
+    /*size variables*/
     --nav-max-width: 7rem;
 
     --theme-toggle-width: 7rem;
@@ -99,8 +98,6 @@ a.navItem{
     cursor: pointer;
 }
 .nav-interactive:hover{
-    /*background-image: radial-gradient(var(--accent-color-2) 55%,var(--accent-color) 70%);*/
-
     /*rounded square hover effect*/
     border-radius: 10%;
     background-color: var(--accent-color-2);
