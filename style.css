@@ -102,6 +102,14 @@ a.navItem{
     border-radius: 10%;
     background-color: var(--accent-color-2);
 }
+/*contact buttons spacing/sizes*/
+.navItem.contact-but{
+    width: 1.5em;
+}
+/*images that are children of .contactBut class*/
+.navItem.contact-but > .contact-image{
+    width: 100%;
+}
 
 .theme-toggle{
     width: var(--theme-toggle-width);
@@ -113,7 +121,7 @@ a.navItem{
     border-radius: var(--theme-toggle-border-radius);
 
     position: fixed;
-    top: 10px;
+    bottom: 10px;
     right: 10px;
 
     display: flex;
